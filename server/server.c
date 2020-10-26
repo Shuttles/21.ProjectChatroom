@@ -7,12 +7,14 @@
 
 #include "../common/head.h"
 #include "../common/common.h"
-#include "../common/tcp_server.h"
+#include "../common/color.h"
+//#include "../common/tcp_server.h"
 
 #define MAX_CLIENT 512
 
 int main() {
-    int port = 
+    char *port = get_conf("./server.conf", "SERVER_PORT"); 
+    printf(PINK("%s") "\n", port);
 
     return 0;
 }
